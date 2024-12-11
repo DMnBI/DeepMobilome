@@ -68,6 +68,7 @@ If you don't know the answer, just put either 0 or 1 for every given sample.
 Predict existence of the target sequence in sample using the trained model.
 Sample1 and sample2 are human data from [Cho, Y., et al., Deciphering Resistome in Patients With Chronic Obstructive Pulmonary Diseases and Clostridioides difficile Infections. Front Microbiol, 2022. 13: p. 919907.]
 Target sequence is 'IS26/AAC(6')-Ie-APH(2'’)-Ia/N-acetyltransferase/IS26'
+fastq file of sample1 and sample2 is uploaded at xxx(dropbox link)
 
 ```
 cd tutorial/
