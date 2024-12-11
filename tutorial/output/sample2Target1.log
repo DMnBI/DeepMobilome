@@ -1,0 +1,7 @@
+2024-12-11 07:08:34,012:INFO:root:Current Directory : /data2/users/yncho/deepMobilome_github241030/Tutorial/XTest
+
+2024-12-11 07:08:34,014:INFO:STDOUT:[DeepMobilome data transformation Start]
+2024-12-11 07:08:34,057:INFO:STDOUT:[Complete] "sample2_target1" Aligned read # 54
+2024-12-11 07:08:34,059:INFO:STDOUT:[DeepMobilome data transformation End]
+2024-12-11 07:08:34,059:INFO:STDOUT:[DeepMobilome prediction Start]
+2024-12-11 07:08:35,301:INFO:STDOUT:[DeepMobilome prediction End]
