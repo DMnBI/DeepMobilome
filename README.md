@@ -26,7 +26,7 @@ git clone https://github.com/DMnBI/DeepMobilome.git
 cd environment
 conda env create -f DeepMobilome.yml
 conda activate DeepMobilome
-export PATH=/path/to/DeepMobilome/Script/:$PATH
+export PATH=/path/to/DeepMobilome/scripts/:$PATH
 ```
 
 ## 2. Predict 
