@@ -72,7 +72,6 @@ fastq file of sample1 and sample2 is uploaded at [dropbox](https://www.dropbox.c
 
 ```
 cd tutorial/
-
 ```
 
 ### 2.2.1 Positive sample
@@ -87,7 +86,7 @@ deepmobilome \
 ```
 
 ```
-[Prediction example]
+[Prediction example-positive_sample/sample1target1answer.csv]
 Sample,Answer,Predicted,AvgDepth
 sample1_target1_Target1,1,1,148.44
 ```
@@ -105,7 +104,7 @@ deepmobilome \
 ```
 
 ```
-[Prediction example]
+[Prediction example-negative_sample/sample2target1answer.csv]
 Sample,Answer,Predicted,AvgDepth
 sample2_target1_Target1,0,0,161.63
 ```
