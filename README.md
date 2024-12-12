@@ -70,6 +70,8 @@ Sample1 and sample2 are human data from [Cho, Y., et al., Deciphering Resistome 
 Target sequence is 'IS26/AAC(6')-Ie-APH(2'’)-Ia/N-acetyltransferase/IS26'
 fastq file of sample1 and sample2 is uploaded at [dropbox](https://www.dropbox.com/scl/fo/yim6mg1mty0sh7pwmjcq5/ANA4aaWp_BUBPzUjAmMVSZo?rlkey=oywamzp15bpg07hvvtiuy0y9b&st=3m10v2fx&dl=0)
 
+GPU is not required, but if you don't have it you may get a warning. However, that doesn't mean the program won't run.
+
 ```
 cd tutorial/
 ```
