@@ -22,7 +22,7 @@ We strongly recommend you to use python virtual environment with Anaconda/Minico
 
 ### 1.1 Build environment
 ```
-git clone https://(gitclone site)
+git clone https://github.com/DMnBI/DeepMobilome.git
 cd environment
 conda env create -f DeepMobilome.yml
 conda activate DeepMobilome
@@ -68,7 +68,7 @@ If you don't know the answer, just put either 0 or 1 for every given sample.
 Predict existence of the target sequence in sample using the trained model.
 Sample1 and sample2 are human data from [Cho, Y., et al., Deciphering Resistome in Patients With Chronic Obstructive Pulmonary Diseases and Clostridioides difficile Infections. Front Microbiol, 2022. 13: p. 919907.]
 Target sequence is 'IS26/AAC(6')-Ie-APH(2'’)-Ia/N-acetyltransferase/IS26'
-fastq file of sample1 and sample2 is uploaded at xxx(dropbox link)
+fastq file of sample1 and sample2 is uploaded at [dropbox](https://www.dropbox.com/scl/fo/yim6mg1mty0sh7pwmjcq5/ANA4aaWp_BUBPzUjAmMVSZo?rlkey=oywamzp15bpg07hvvtiuy0y9b&st=3m10v2fx&dl=0)
 
 ```
 cd tutorial/
