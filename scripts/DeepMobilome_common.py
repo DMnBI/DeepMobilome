@@ -41,7 +41,7 @@ def accumulate(num_list):
             sum_list.append(value)
     return sum_list
 
-def sam_parse(key,nm,refDic,refRead,sr,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth):
+def sam_parse(key,inDir,nm,refDic,refRead,sr,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth):
     """Parse SAM file and save data to the dictionary 
 
     Args:
@@ -65,7 +65,7 @@ def sam_parse(key,nm,refDic,refRead,sr,refDNA,sampleDNA,linkmatrix,readposcount,
         readposcount
         insertdepth
     """    
-    open_sam = open(key)
+    open_sam = open(inDir+'/'+key)
     all_sam = {}
 
     hasfus=0

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import argparse
 import subprocess
@@ -58,12 +60,12 @@ def init_argv():
                     """ 
                 ,formatter_class= argparse.RawTextHelpFormatter)
     parser.add_argument("-i","--inFile",dest="inFile",metavar="FILE",required=True, help="sam File : sample reads aligned to target sequence")
-    parser.add_argument("-o","--outFile",dest="outFile",metavar="FILE",required=True,help="output File predicted result")
-    parser.add_argument("-l","--logFile",dest="logFile",metavar="FILE",required=True,help="log File")
-    parser.add_argument("-r","--ref",dest="ref",metavar="FILE",required=True, help="Target sequence file")
-    parser.add_argument("-c","--count",dest = "count",required=True, help ="read count list",)
-    parser.add_argument("-a","--ans",dest= "ans",metavar ="FILE", help = "Answer of the given case, samplename and answer, csv file",required=True)
-    parser.add_argument("-s","--save", dest="save",help="load model", required=True)
+    parser.add_argument("-o","--outFile",dest="outFile",metavar="FILE",required=True,help="predicted result / samplename,Answer,Predict,AvgDepth / csv file")
+    parser.add_argument("-l","--logFile",dest="logFile",metavar="FILE",required=True,help="log file")
+    parser.add_argument("-r","--ref",dest="ref",metavar="FILE",required=True, help="target sequence file / fna file")
+    parser.add_argument("-c","--count",dest = "count",required=True, help ="read count / samplename,read count / csv file",)
+    parser.add_argument("-a","--ans",dest= "ans",metavar ="FILE", help = "answer for the given case / samplename,answer / csv file",required=True)
+    parser.add_argument("-s","--save", dest="save",help="model weight", required=True)
 
 
     args = parser.parse_args()
@@ -101,7 +103,7 @@ def extend_data(df):
 
 def convert_to_0(predict):
 
-	return list(map(lambda x: 0 if x < 0.5 else 1, predict))
+    return list(map(lambda x: 0 if x < 0.5 else 1, predict))
 
 
 
@@ -272,14 +274,16 @@ def dataTransformation(inFile, refFile, countFile, ansFile, nm, sr):
 
 #fList[num] = inFile
     key = inFile.split('.sam')[0]
+    key = key.split('/')[-1]
     name = key.split('_')[0]
     if name in ansDic:
         refDic,refRead,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth,refLengthDic= ref_dic_realdata(refFile,MAX_LENGTH)
-        refDic,refRead,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth = sam_parse(inFile,nm,refDic,refRead,sr,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth)
+        refDic,refRead,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth = sam_parse(inFile,"./",nm,refDic,refRead,sr,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth)
         calculate_depth_coverage(key,refDic,countRead,refRead,refDNA,sampleDNA,linkmatrix,readposcount,insertdepth,refLengthDic)
         Ans.append(ansDic[name]) 
     else:
         print (f"[Error] \"{key}\" has no Answer")
+        return
 
 
     data ={"Sample":Sample,
@@ -340,11 +344,12 @@ if __name__ == "__main__":
 
     print("[DeepMobilome data transformation End]")
 
+    if not data.empty:
 
-    print("[DeepMobilome prediction Start]")
-    makePrediction(data, args.save, args.outFile, args.depth)
+        print("[DeepMobilome prediction Start]")
+        makePrediction(data, args.save, args.outFile, args.depth)
 
-    print("[DeepMobilome prediction End]")
+        print("[DeepMobilome prediction End]")
 
 
             
