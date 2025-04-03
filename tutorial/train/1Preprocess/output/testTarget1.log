@@ -1,0 +1,7 @@
+2025-04-02 10:09:07,917:INFO:root:Current Directory : /data2/users/yncho/deepmobilomeGit250402/tutorial/train/1Preprocess
+
+2025-04-02 10:09:07,918:INFO:STDOUT:[DeepMobilome_prep Start]
+2025-04-02 10:09:07,918:INFO:STDOUT:Used Command : python /data2/users/yncho/deepmobilomeGit250402/scripts/DeepMobilome_prep.py -i input/sam/list.txt -in input/sam/ -o output/testTarget1 -r input/target/Target1seq.fna -c input/fastq/read_detail.txt -a input/target/Target1answer.csv -nm 0.9 -s 0.5
+2025-04-02 10:09:08,116:INFO:STDOUT:[Complete] "sample1_target1" Aligned read # 294
+2025-04-02 10:09:08,210:INFO:STDOUT:[Complete] "sample2_target1" Aligned read # 54
+2025-04-02 10:09:08,216:INFO:root:[DeepMobilome_prep Complete]

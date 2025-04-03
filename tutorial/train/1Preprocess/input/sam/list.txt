@@ -1,0 +1,2 @@
+sample1_target1.sam
+sample2_target1.sam
