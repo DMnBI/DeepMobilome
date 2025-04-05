@@ -9,7 +9,7 @@ Youna Cho, Mina Rho
 ## Overview
 Here is the brief overview of DeepMobilome’s prediction workflow.
 
- ![Image](https://github.com/user-attachments/assets/c65c9a00-ed85-4b64-adc5-511ccc831b43)
+ ![Image](./image/figure1.png)
 
 DeepMobilome predicts target MGEs through three phases: input generation, data transformation, and model prediction (Fig. 1).  
 a) In the input generation phase, sample reads are aligned to the target MGE sequences using a read aligner such as Bowtie2.  
