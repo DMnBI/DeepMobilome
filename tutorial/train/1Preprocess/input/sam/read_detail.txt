@@ -1,0 +1,5 @@
+Sample,Read count,bp size
+sample1_R1_0.85.fastq,19862186,2995108817
+sample1_R2_0.85.fastq,19862186,2900416218
+sample2_R1_0.85.fastq,16264204,2452930075
+sample2_R2_0.85.fastq,16264204,2350171850
