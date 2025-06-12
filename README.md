@@ -212,7 +212,7 @@ Run train
 ```
 cd tutorial/train/3Train/
 
-deepmobilome --inFile input/list.txt -in input/ -o output/Testmodel1
+deepmobilome train --inFile input/list.txt -in input/ -o output/Testmodel1
 ```
 
 ### 3.4 Running DeepMobilome *predict*
