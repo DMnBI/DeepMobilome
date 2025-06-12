@@ -161,7 +161,7 @@ cd tutorial/train/1Preprocess/
 deepmobilome prep \
 --inFile input/sam/list.txt --inDir input/sam/ \
 -o output/testTarget1 --ref input/target/Target1seq.fna \
---count input/fastq/read_detail.txt  --ans input/target/Target1answer.csv
+--count input/sam/read_detail.txt  --ans input/target/Target1answer.csv
 ```
 
 ### 3.2 Running DeepMobilome *shuffle* (optional)
