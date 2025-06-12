@@ -1,0 +1,7 @@
+2025-06-12 10:38:51,719:INFO:root:Current Directory : /data2/users/yncho/DeepMobilome250612/updateDeep/tutorial/train/4Predict
+
+2025-06-12 10:38:51,720:INFO:STDOUT:[DeepMobilome data transformation Start]
+2025-06-12 10:38:51,795:INFO:STDOUT:[Complete] "sample1_target1" Aligned read # 294
+2025-06-12 10:38:51,798:INFO:STDOUT:[DeepMobilome data transformation End]
+2025-06-12 10:38:51,798:INFO:STDOUT:[DeepMobilome prediction Start]
+2025-06-12 10:38:53,052:INFO:STDOUT:[DeepMobilome prediction End]
