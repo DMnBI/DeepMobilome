@@ -1,0 +1,9 @@
+2025-06-12 10:28:18,930:INFO:root:Current Directory : /data2/users/yncho/DeepMobilome250612/updateDeep/tutorial/train/3Train
+2025-06-12 10:28:18,930:INFO:root:Used Command : python /data2/users/yncho/DeepMobilome250612/updateDeep/scripts/DeepMobilome_train.py -i input/list.txt -in input/ -o output/Testmodel1
+2025-06-12 10:28:18,930:INFO:root:MAX epoch : 5000
+2025-06-12 10:28:18,930:INFO:root:Batch size : 1
+2025-06-12 10:28:18,930:INFO:root:Random State: 27
+2025-06-12 10:28:18,936:INFO:root:CNN filter layers (32, 64, 128)
+2025-06-12 10:28:18,936:INFO:root:fnn Layer (128, 8)
+2025-06-12 10:37:16,535:INFO:root:test loss, test acc: 0.051237765699625015. 0.99609375
+2025-06-12 10:37:17,191:INFO:root:END

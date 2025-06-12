@@ -129,7 +129,7 @@ def create_cnn(width, depth, filters=(32, 64, 128), regress=False):
         x = Dense(f)(x)
         x = Activation("relu")(x)
         x = BatchNormalization(axis=chanDim)(x)
-        x = Dropout(0.5)(x)
+        x = Dropout(0.7)(x)
 
 
     x = Dense(1, activation="sigmoid")(x)

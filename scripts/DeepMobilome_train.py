@@ -29,6 +29,7 @@ import numpy as np
 
 from keras import backend as K
 from tensorflow.keras.utils import Sequence
+from tensorflow.keras.optimizers import Adam
 from matplotlib import pyplot as plt
 import math
 import logging, sys, subprocess,os
@@ -162,7 +163,7 @@ def init():
 
 	Input: plk List
 	Output: Trained CNN model 
-	{outPre}_model.h5, {outPre}_weights.h5
+	{outPre}_weights.h5,
 	{outPre}_loss.log, {outPre}.log
 
 	"""
@@ -202,7 +203,7 @@ def create_cnn(width, depth,mylog,fnnLayer = (128), filters=(32, 64, 128), regre
 		x = Dense(f)(x)
 		x = Activation("relu")(x)
 		x = BatchNormalization(axis=chanDim)(x)
-		x = Dropout(0.5)(x)
+		x = Dropout(0.7)(x)
 
 
 	x = Dense(1, activation="sigmoid")(x)
@@ -261,7 +262,8 @@ def main():
 	model = create_cnn(MAXLENGTH, 3,mylog, regress=False)
 
 	callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5)
-	model.compile(loss="binary_crossentropy", optimizer= "adam", metrics = ["accuracy"])
+	optimizer= Adam(learning_rate=float(0.0003))
+	model.compile(loss="binary_crossentropy", optimizer= optimizer, metrics = ["accuracy"])
 
 
 	history = model.fit(train_loader,validation_data = val_loader ,epochs = epoch,callbacks=[csv_logger, callback])
@@ -271,7 +273,7 @@ def main():
 	mylog.info(f"test loss, test acc: {test_loss}. {test_acc}")
 
 
-	model.save(args.outPre+'_model.h5')
+#	model.save(args.outPre+'_model.h5')
 	model.save_weights(args.outPre+'_weights.h5')
 	del model
 
