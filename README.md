@@ -31,7 +31,7 @@ git clone https://(gitclone site)
 cd environment
 conda env create -f DeepMobilome.yml
 conda activate DeepMobilome
-export PATH=/path/to/DeepMobilome/Script/:$PATH
+export PATH=/path/to/DeepMobilome/scripts/:$PATH
 ```
 
 ## 2. Predict 
@@ -84,7 +84,7 @@ cd tutorial/
 Predict positive sample as positive
 
 ```
-deepmobilome predict \ 
+deepmobilome predict \
 --inFile positive_sample/sample1_target1.sam \
 -o output/sample1Target1.csv -l output/sample1Target1.log \
 --ref target/Target1seq.fna --count positive_sample/sample1_read_detail.txt \
