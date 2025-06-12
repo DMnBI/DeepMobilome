@@ -228,3 +228,4 @@ deepmobilome predict \
 --save ../3Train/output/Testmodel1_weights.h5
 
 ```
+Note: This training dataset is only a very small subset of the data used to train the full model. Therefore, model built from this dataset will not be identical to the provided model.
